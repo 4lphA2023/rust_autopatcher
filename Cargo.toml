@@ -1,0 +1,13 @@
+[package]
+name = "rust_autopatcher"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1", features = ["full"] }
+blake3 = "1.3"
+sha2 = "0.9"
+# Choose one UI library: Tauri or egui
+tauri = { version = "1", features = ["api-all"] }
+# egui = "0.16"
