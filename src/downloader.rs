@@ -5,6 +5,7 @@ use std::fs::File;
 use std::io::{self, Write};
 use tokio::io::AsyncWriteExt;
 use tokio::fs::OpenOptions;
+use futures_util::StreamExt;
 
 pub async fn download_file(url: &str, output_path: &str, expected_hash: &str, use_blake3: bool) -> Result<(), Box<dyn std::error::Error>> {
     // Create HTTP client
